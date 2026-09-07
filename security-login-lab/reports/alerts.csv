@@ -1,0 +1,2 @@
+alert_id,username,device,source_ip,failed_count,first_failure,last_failure,successful_login,verdict
+AUTH-001,alice,warehouse-pc-01,192.0.2.10,3,2026-09-06T09:00:00+00:00,2026-09-06T09:02:00+00:00,2026-09-06T09:03:00+00:00,Needs investigation; compromise is not confirmed

@@ -1,0 +1,33 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Distribution Defense — Login Analysis</title><style>
+    :root{color-scheme:dark}body{margin:0;background:#101722;color:#e6edf7;
+    font:16px/1.6 system-ui,sans-serif}main{max-width:1000px;margin:auto;padding:36px 22px}
+    h1{font-size:clamp(28px,5vw,44px);line-height:1.15}h2{font-size:22px}
+    .eyebrow{color:#a9bfff;letter-spacing:2px;font-size:13px}.muted{color:#b6c2d6}
+    section,.metric{background:#1b2636;border:1px solid #35445b;border-radius:12px;padding:22px;margin:18px 0}
+    .metrics{display:flex;gap:18px;flex-wrap:wrap}.metric{flex:1;min-width:150px}
+    .metric strong{display:block;font-size:30px;color:#b7c8ff}.badge{color:#ffd88b;font-size:12px;letter-spacing:1px}
+    table{border-collapse:collapse;width:100%;text-align:left}th,td{padding:10px;border-bottom:1px solid #35445b}
+    .scroll{overflow-x:auto}li{margin:8px 0}code{color:#b7c8ff}footer{font-size:13px;color:#b6c2d6}
+    @media print{body{background:white;color:black}section,.metric{background:white;color:black}footer,.muted{color:#333}}
+    </style></head><body><main><p class="eyebrow">DISTRIBUTION DEFENSE / SECURITY PORTFOLIO LAB</p>
+    <h1>From login events to investigation.</h1>
+    <p class="muted">Offline analysis · Bundled dataset is fictional · No automated containment</p>
+    <div class='metrics'><div class='metric'>Events reviewed<strong>10</strong></div><div class='metric'>Alerts to investigate<strong>1</strong></div></div><section><h2>Detection rule</h2><p>At least 3 failed logins within 5 minutes, followed by success within 2 minutes of the last failure, for the same username, device, and source IP.</p><p>Window boundaries are inclusive. A successful login resets the group's failure history.</p></section><section><span class="badge">REVIEW REQUIRED</span>
+        <h2>AUTH-001 · alice</h2>
+        <p>warehouse-pc-01 · 192.0.2.10</p>
+        <p><strong>3 failures followed by a successful login.</strong>
+        Needs investigation; compromise is not confirmed.</p>
+        <div class="scroll"><table><thead><tr><th>CSV row</th><th>Time (UTC)</th><th>Status</th>
+        </tr></thead><tbody><tr><td>2</td><td>2026-09-06T09:00:00+00:00</td><td>failed</td></tr><tr><td>3</td><td>2026-09-06T09:01:00+00:00</td><td>failed</td></tr><tr><td>4</td><td>2026-09-06T09:02:00+00:00</td><td>failed</td></tr><tr><td>5</td><td>2026-09-06T09:03:00+00:00</td><td>success</td></tr></tbody></table></div></section><section><h2>Suggested analyst next steps</h2><ol>
+    <li>Verify whether the user recognizes the activity and check approved administrative work.</li>
+    <li>Correlate identity, MFA, endpoint, and network records around the listed timestamps.</li>
+    <li>Assess account privileges and device importance; document evidence and uncertainty.</li>
+    <li>Escalate confirmed concerns using the organization's response process. Coordinate any
+    disruption to distribution or production systems with their owners.</li></ol>
+    <p>These are recommendations, not actions taken by this program.</p></section>
+    <section><h2>Limitations</h2><p>This small rule does not detect all password attacks.
+    It misses distributed attempts across different IPs or devices, failure-only attacks,
+    and activity outside its windows. Legitimate password mistakes may also match.
+    Input duplicates are counted separately; remove collection duplicates before analysis.</p></section><footer>Generated 2026-09-06T21:49:57.410536+00:00 · Evidence: alerts.csv and results.json · Independent educational project; no company affiliation.</footer></main></body></html>
