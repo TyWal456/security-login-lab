@@ -10,13 +10,10 @@ Reads authentication events from CSV, detects repeated failed logins followed by
 
 ## Start here — Windows
 
-1. Download and extract the ZIP using File Explorer's **Extract All** option.
-2. Open the extracted `security-login-lab` folder containing `login_checker.py`.
-3. Click File Explorer's address bar, type `cmd`, and press Enter.
-4. Enter this command:
 
-```text
-python login_checker.py
+
+
+## python login_checker.py
 ```
 
 5. Open `reports`, then double-click `report.html` to see the results in your browser.
