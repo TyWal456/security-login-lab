@@ -96,9 +96,9 @@ Change one condition at a time and record exact input, expected result, observed
 
 This offline educational rule is not a SIEM, EDR tool, or proof of production experience. It does not detect distributed attempts across IPs/devices, failure-only attacks, or behavior outside the time windows. It counts duplicate records independently. It loads the CSV into memory and is designed for small lab datasets.
 
-The HTML is a static report generated directly from Python's findings, not a live dashboard.  I re-ran Python and refreshed the HTML to update it. All styling is local; no internet connection is needed.
+The HTML is a static report generated directly from the Python findings rather than a live dashboard. Updated results require the Python program to be rerun and the HTML report to be refreshed or reopened.
 
-Use the investigation template to explain what you know, what you still need to verify, and why your recommended response is appropriate. Coordinate any proposed disruption to distribution/manufacturing systems with their owners. This program takes no containment actions.
+The investigation template documents known evidence, information requiring additional verification, and the reasoning behind a recommended response. Any proposed disruption to distribution or manufacturing systems would require coordination with the appropriate system owners. This program performs no containment actions. Coordinate any proposed disruption to distribution/manufacturing systems with their owners.
 
 ## Published repository of Project on GitHub
 
