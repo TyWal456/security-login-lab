@@ -1,6 +1,6 @@
 # Distribution Defense: Python Security Login Lab
 
-An independent beginner security-operations portfolio project. All bundled events are fictional; this project is not affiliated with ABARTA Coca-Cola or any employer.
+An independent beginner security-operations portfolio project. All bundled events are fictional; this project is not affiliated with any employer.
 
 ## What this project does
 
