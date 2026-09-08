@@ -30,7 +30,7 @@ The command also prints the report's location. If `python` is unavailable on a d
 
 | File | Purpose |
 |---|---|
-| `login_checker.py` | Main program; open this in Notepad++ to study or edit it |
+| `login_checker.py` | Main program; Notepad++ was the choice of editor|
 | `data/login_events.csv` | Ten fictional events covering three scenarios |
 | `test_login_checker.py` | Automated checks for detection and validation behavior |
 | `reports/report.html` | Generated visual report, opens locally without a server |
@@ -39,7 +39,7 @@ The command also prints the report's location. If `python` is unavailable on a d
 | `TEST_RESULTS.md` | Recorded verification and sample outcomes |
 | `INVESTIGATION_TEMPLATE.md` | Prompts for your own analysis |
 
-## Read the Python in this order
+## Program Order Interpretation -->
 
 1. Imports: standard-library tools for CSV, timestamps, reports, and command-line options.
 2. `load_events`: checks the columns, timestamps, IP addresses, and status values.
@@ -69,7 +69,7 @@ Timestamps must include a timezone, such as `2026-09-06T09:00:00Z`. The program 
 
 Invalid input stops analysis with an error and a nonzero exit code. If reports from a previous run already exist, they remain unchanged; do not mistake them for new results after an error. Empty input with valid headers yields zero events and alerts.
 
-## Change the rule or input
+## Tested the Failure/ Success Rate Login Boundaries ##
 
 ```text
 python login_checker.py --threshold 5 --window-minutes 4 --success-minutes 2
@@ -79,9 +79,9 @@ python login_checker.py --help
 
 With threshold 5, the bundled dataset produces no alerts. To reproduce the screenshot's illustrative five-failure scenario, add two distinct failure events within four minutes, followed by success within two minutes. This project implements login analysis, not the screenshot's asset inventory or vulnerability management panels.
 
-Default input/output locations are relative to the script. Explicit relative paths are relative to the command prompt's current folder. Successful runs replace output files in the selected output folder. Use a different `--output` folder to preserve separate experiments.
+Default input/output locations are relative to the script. Explicit relative paths are relative to the command prompt's current folder. Successful runs replace output files in the selected output folder. I used a different `--output` folder to preserve separate experiments.
 
-## Test and record evidence
+## Tested and recorded evidence
 
 Run from the project folder:
 
@@ -100,8 +100,5 @@ The HTML is a static report generated directly from Python's findings, not a liv
 
 Use the investigation template to explain what you know, what you still need to verify, and why your recommended response is appropriate. Coordinate any proposed disruption to distribution/manufacturing systems with their owners. This program takes no containment actions.
 
-## Publish on GitHub
+## Published repository of Project on GitHub
 
-Create a repository such as `security-login-lab`. Upload the extracted project files, not just the ZIP. Keep only synthetic/sanitized data and inspect all output before publishing. Include your own test notes and investigation conclusions. Clearly distinguish this lab from employment experience, and acknowledge any assistance used to build it.
-
-Suggested next improvements: correlate asset criticality, add evidence-driven triage notes, and implement the same rule in KQL with documented schema differences.
