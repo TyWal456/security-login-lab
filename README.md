@@ -8,7 +8,6 @@ Reads authentication events from CSV, detects repeated failed logins followed by
 
 **Requirements:** Python 3.10 or later. No additional packages or installation commands are required. Built and tested in Python; intended to run on Windows, macOS, and Linux.
 
-## Start here — Windows
 
 
 
