@@ -24,7 +24,7 @@ Reviewed 10 events. Found 1 alert(s).
 AUTH-001: alice / warehouse-pc-01 — 3 failures followed by success.
 ```
 
-The command also prints the report's location. If `python` is unavailable on a different machine, try `python3`. Do not type the code-block label or the command prompt's folder path.
+## Used Python3 rather than Python although either of the two would be fine
 
 ## Files
 
@@ -96,7 +96,7 @@ Change one condition at a time and record exact input, expected result, observed
 
 This offline educational rule is not a SIEM, EDR tool, or proof of production experience. It does not detect distributed attempts across IPs/devices, failure-only attacks, or behavior outside the time windows. It counts duplicate records independently. It loads the CSV into memory and is designed for small lab datasets.
 
-The HTML is a static report generated directly from Python's findings, not a live dashboard. Rerun Python and refresh/reopen the HTML to update it. All styling is local; no internet connection is needed.
+The HTML is a static report generated directly from Python's findings, not a live dashboard.  I re-ran Python and refreshed the HTML to update it. All styling is local; no internet connection is needed.
 
 Use the investigation template to explain what you know, what you still need to verify, and why your recommended response is appropriate. Coordinate any proposed disruption to distribution/manufacturing systems with their owners. This program takes no containment actions.
 
